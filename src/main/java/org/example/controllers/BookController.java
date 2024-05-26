@@ -2,11 +2,13 @@ package org.example.controllers;
 
 import org.example.entities.Book;
 import org.example.services.BookService;
+import org.example.services.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/books")
@@ -14,6 +16,9 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
+
+    @Autowired
+    private LibraryService libraryService;
 
     @GetMapping
     public List<Book> getAllBooks() {
