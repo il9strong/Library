@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "library_record")
 public class LibraryRecord {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,8 +19,9 @@ public class LibraryRecord {
     private Long bookId;
     private LocalDateTime borrowedAt;
     private LocalDateTime dueAt;
+    private LocalDateTime returnedAt;
 
-    // getters and setters
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -50,5 +52,13 @@ public class LibraryRecord {
 
     public void setDueAt(LocalDateTime dueAt) {
         this.dueAt = dueAt;
+    }
+
+    public LocalDateTime getReturnedAt() {
+        return returnedAt;
+    }
+
+    public void setReturnedAt(LocalDateTime returnedAt) {
+        this.returnedAt = returnedAt;
     }
 }

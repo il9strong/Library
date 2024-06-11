@@ -8,5 +8,6 @@ import java.util.List;
 
 @Repository
 public interface LibraryRecordRepository extends JpaRepository<LibraryRecord, Long> {
-    List<LibraryRecord> findByDueAtIsNull();
+    List<LibraryRecord> findByReturnedAtIsNotNull();
+    List<LibraryRecord> findByReturnedAtIsNull();
 }
