@@ -1,5 +1,6 @@
 package org.example.services;
 
+import org.example.entities.Book;
 import org.example.entities.LibraryRecord;
 import org.example.repositories.LibraryRecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,8 @@ public class LibraryService {
     @Autowired
     private LibraryRecordRepository libraryRecordRepository;
 
-    public List<LibraryRecord> getAvailableBooks() {
-        return libraryRecordRepository.findByReturnedAtIsNotNull();
+    public List<Book> getAvailableBooks() {
+        return libraryRecordRepository.findAvailableBooks();
     }
 
     public List<LibraryRecord> getBorrowedBooks() {

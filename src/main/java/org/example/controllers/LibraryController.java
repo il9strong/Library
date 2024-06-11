@@ -1,5 +1,6 @@
 package org.example.controllers;
 
+import org.example.entities.Book;
 import org.example.entities.LibraryRecord;
 import org.example.services.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class LibraryController {
     private LibraryService libraryService;
 
     @GetMapping("/available")
-    public List<LibraryRecord> getAvailableBooks() {
+    public List<Book> getAvailableBooks() {
         return libraryService.getAvailableBooks();
     }
 
