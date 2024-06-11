@@ -27,7 +27,7 @@ public class LibraryService {
         LibraryRecord record = new LibraryRecord();
         record.setBookId(bookId);
         record.setBorrowedAt(LocalDateTime.now());
-        record.setDueAt(LocalDateTime.now().plus(14, ChronoUnit.DAYS)); // Например, срок возврата 14 дней
+        record.setDueAt(LocalDateTime.now().plus(14, ChronoUnit.DAYS));
         return libraryRecordRepository.save(record);
     }
 
