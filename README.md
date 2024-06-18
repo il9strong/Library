@@ -30,3 +30,4 @@ CREATE TABLE library_record (
 
 Использование Swagger UI:
 Откройте документацию Swagger UI по адресу: http://localhost:8080/swagger-ui.html
+
